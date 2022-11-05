@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register|PS STORE</title>
+
+    <link href="static/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+    
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+    </style>
+
+    <link href="static/css/floating-labels.css" rel="stylesheet">
+</head>
+<body>
+    <form class="form-signin" action="/register" method="POST">
+        {% csrf_token %}
+
+        <div class="text-center mb-4">
+            <img class="mb-4" src="static/images/logo.png" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-normal-strong">PS STORE</h1>
+        </div>
+        
+        <div class="form-label-group">
+            <input type="text" id="name" name="name" class="form-control" placeholder="name" required autofocus>
+            <label for="name">Name</label>
+        </div>
+
+        <div class="form-label-group">
+            <input type="email" id="email" name="email" class="form-control" placeholder="email" required>
+            <label for="email">Email</label>
+        </div>
+
+        <div class="form-label-group">
+            <input type="password" id="password" name="password" class="form-control" placeholder="password" required>
+            <label for="password">Password</label>
+        </div>
+
+        <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+            <p style="float: right;">Already have an account?<a href="/signin" style="text-decoration: none;"> Sign in</a></p>
+        </div>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+
+        <p class="mt-5 mb-3 text-muted text-center">PS STORE &copy; 2017-2020</p>
+    </form>
+</body>
+</html>

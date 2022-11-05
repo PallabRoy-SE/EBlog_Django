@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.72.0">
+  <title>Login|PS STORE</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="static/css/floating-labels.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <form class="form-signin" method="POST" action="/signin">
+  {% csrf_token %}
+    <div class="text-center mb-4">
+      <img class="mb-4" src="static/images/logo.png" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal-strong">PS STORE</h1>
+    </div>
+
+    <div class="form-label-group">
+      <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus>
+      <label for="username">Username</label>
+    </div>
+
+    <div class="form-label-group">
+      <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+      <label for="inputPassword">Password</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+      <p style="float: right;">Have no account?<a href="/register" style="text-decoration: none;"> Sign up</a></p>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted text-center">PS STORE &copy; 2017-2020</p>
+  </form>
+
+
+
+</body>
+
+</html>
